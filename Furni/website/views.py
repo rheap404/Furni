@@ -223,6 +223,6 @@ with app.app_context():
     db.session.commit()
     
     
-@views.route('/thankyou')
-def thankyou():
-    return render_template("thankyou.html")
+# @views.route('/thankyou')
+# def thankyou():
+#     return render_template("thankyou.html")
