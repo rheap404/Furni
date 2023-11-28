@@ -1,0 +1,17 @@
+<body>
+  {% extends "base.html"%}{%block content%}
+
+    <form method="POST" class="form">
+      {{ form.hidden_tag() }}
+      <label for="name" id="label">Name:</label>{{ form.name }} <br />
+      <label for="email" id="label">Email:</label>{{ form.email }} <br />
+      <label for="password" id="label">Password:</label>{{ form.password }}<br />
+      <button type="submit" id="submit">Submit</button>
+    </form>
+
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/tiny-slider.js"></script>
+    <script src="static/js/custom.js"></script>
+  </body>
+  {% endblock %}
+</html>

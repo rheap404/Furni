@@ -1,0 +1,39 @@
+<body>
+  {% extends "base.html"%}{%block content%}
+
+  {% with messages = get_flashed_messages() %}
+   {% if messages %}
+    <ul>
+     {% for message in messages %}
+       <li>{{ message }} </li>
+     {% endfor %}
+    </ul>
+    {% endif %}
+  {% endwith %}
+
+
+  <div class="login_box">
+    <form method="POST" class="form">
+      <span class="login_title">Login</span>
+      {{ Lform.hidden_tag() }}
+      <label for="email" id="label">Email:</label>{{ Lform.email }} <br />
+      <label for="password" id="label">Password:</label>{{ Lform.password }}<br />
+      {# <button type="submit" id="submit">Submit</button> #}
+      {{ Lform.submit }}
+    </form>
+
+    <div class="login_line"></div>
+
+    <form method="POST" class="form">
+      <span class="login_title">Dont have an account?<br> Register below</span>
+      {{ Rform.hidden_tag() }}
+      <label for="name" id="label">Name:</label>{{ Rform.name }} <br />
+      <label for="email" id="label">Email:</label>{{ Rform.email }} <br />
+      <label for="password" id="label">Password:</label>{{ Rform.password }}<br />
+      {# <button type="submit" id="submit">Submit</button> #}
+      {{ Rform.submit }}
+    </form>
+  </div>
+  </body>
+  {% endblock %}
+</html>
